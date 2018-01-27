@@ -1,5 +1,7 @@
 # skalman
 
+## Setup
+
 ### Setup the Raspbian RPI (wifi hotspot, video streaming)
 
 - Install the latest verison of Raspian:
@@ -36,7 +38,7 @@
 - - - $ sudo nano /etc/group
 - - - In my case (my username is 'pi'), I hade to change the line "dialout:x:20:" to "dialout:x:20:pi"
 - - - Restart the computer ($ sudo reboot)
-- - $ roslaunch hls_lfcd_lds_driver hlds_laser.launch (the LiDAR should now start turning and publish messages to /scan, check this with the command $ rostopic echo /scan) !!!!!!!!!!!!!!!!! FIXA, LAGGA TILL NAGOT !!!!!
+- - $ roslaunch hls_lfcd_lds_driver hlds_laser.launch (the LiDAR should now start turning and publish messages to /scan, check this with the command $ rostopic echo /scan)
 
 - Enable SSH:
 - - $ sudo apt-get install raspi-config rpi-update
