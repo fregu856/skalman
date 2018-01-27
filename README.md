@@ -77,6 +77,19 @@
 - Install ROS:
 - - TODO! TODO! TODO! TODO! TODO! TODO! TODO! TODO! TODO! TODO! TODO! TODO! TODO! TODO! TODO!
 
+- Create a catkin workspace in skalman/laptop:
+- - $ cd ~/skalman/laptop
+- - $ mkdir catkin_ws
+- - $ cd catkin_ws
+- - $ mkdir src
+- - $ catkin_make
+- - $ sudo nano ~/.bashrc
+- - Add the below line to the bottom of this file (Ctrl+Shift+v to paste the line, Ctrl+x - y - Enter to save the file)
+```
+source ~/skalman/laptop/catkin_ws/devel/setup.bash
+```  
+- - $ source ~/.bashrc
+
 - Get its IP address:
 - - Make sure it is connected to the Raspbian RPI wifi
 - - $ ifconfig
