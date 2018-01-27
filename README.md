@@ -53,12 +53,39 @@
 - - Below "General", make sure that "Automatically connect to this network when it is available" is selected
 - - Edit any other networks you previously have connected to and make sure that "Automatically connect to this network when it is available" is NOT selected
 
+- Get its IP address:
+- - Make sure it is connected to the Raspbian RPI wifi
+- - $ ifconfig
+- - The IP address is found as "inet addr" below "wlan0". In my case I got: 172.24.1.57
+
 *****
 
 #### Setup the laptop:
 
 - Install ROS:
 - - TODO! TODO! TODO! TODO! TODO! TODO! TODO! TODO! TODO! TODO! TODO! TODO! TODO! TODO! TODO!
+
+- Get its IP address:
+- - Make sure it is connected to the Raspbian RPI wifi
+- - $ ifconfig
+- - The IP address is found as "inet addr" below "wlan0". In my case I got: 172.24.1.72
+
+*****
+
+#### Setup the ROS IP addresses:
+
+- In my case, the laptop has IP address 172.24.1.72 and the Ubuntu RPI has IP address 172.24.1.57
+
+- On the laptop (master):
+- - $ sudo nano ~/.bashrc
+- - Add the following two lines to the bottom of the file: "export ROS_MASTER_URI=http://172.24.1.72:11311" and "export ROS_HOSTNAME=172.24.1.72"
+- - $ source ~/.bashrc
+
+- On the Ubuntu RPI (slave):
+- - $ sudo nano ~/.bashrc
+- - Add the following two lines to the bottom of the file: "export ROS_MASTER_URI=http://172.24.1.72:11311" and "export ROS_HOSTNAME=172.24.1.57"
+- - $ source ~/.bashrc
+
 
 ## Usage:
 
