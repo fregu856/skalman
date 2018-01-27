@@ -2,7 +2,7 @@
 
 ## Setup:
 
-### Setup the Raspbian RPI (wifi hotspot, video streaming):
+#### Setup the Raspbian RPI (wifi hotspot, video streaming):
 
 - Install the latest verison of Raspian:
 - - Download Raspbian with desktop: https://www.raspberrypi.org/downloads/raspbian/
@@ -22,7 +22,7 @@
 
 *****
 
-### Setup the Ubuntu RPI (for reading the LiDAR):
+#### Setup the Ubuntu RPI (for reading the LiDAR):
 
 - Install Ubuntu Mate:  
 - - http://emanual.robotis.com/docs/en/platform/turtlebot3/rpi3_software_setup/#install-linux-on-turtlebot3-burger-raspberry-pi-3 (Download the file, burn the image onto the micro-SD card using e.g. Etcher, insert micro-SD into RPI, power it up and follow the instructions (need HDMI cable and usb mouse & keyboard)) (Choose a username and password of your liking, you'll use it to SSH into the RPI)
@@ -55,13 +55,14 @@
 
 *****
 
-### Setup the laptop:
+#### Setup the laptop:
 
 - Install ROS:
+- - TODO! TODO! TODO! TODO! TODO! TODO! TODO! TODO! TODO! TODO! TODO! TODO! TODO! TODO! TODO!
 
 ## Usage:
 
-- Power on the Raspbian RPI.
-- .
+- Power on the Raspbian RPI
+- Connect the battery and power on the OpenCR (this will power on the Ubuntu RPI)
 - .
 - .
