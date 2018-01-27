@@ -32,7 +32,10 @@
 
 - Setup and test the LiDAR:
 - - $ sudo apt-get install ros-kinetic-hls-lfcd-lds-driver
-- - $ sudo chmod a+rw /dev/ttyUSB0 (do this when the LiDAR is plugged into the RPI, YOU HAVE TO DO THIS EVERYTIME YOU RESTART THE UBUNTU RPI!) (make sure the USB cable connecting the LiDAR with the RPI is NOT charge-only)
+- - Make sure that your username is in the dialout group in /etc/group (otherwise you won't have permission to open /dev/ttyUSB0):
+- - - $ sudo nano /etc/group
+- - - In my case (my username is 'pi'), I hade to change the line "dialout:x:20:" to "dialout:x:20:pi"
+- - - Restart the computer ($ sudo reboot)
 - - $ roslaunch hls_lfcd_lds_driver hlds_laser.launch (the LiDAR should now start turning and publish messages to /scan, check this with the command $ rostopic echo /scan) !!!!!!!!!!!!!!!!! FIXA, LAGGA TILL NAGOT !!!!!
 
 - Enable SSH:
