@@ -40,6 +40,18 @@
 - - - Restart the computer ($ sudo reboot)
 - - $ roslaunch hls_lfcd_lds_driver hlds_laser.launch (the LiDAR should now start turning and publish messages to /scan, check this with the command $ rostopic echo /scan)
 
+- Install the needed packages for communicating with the OpenCR etc:
+- - $ sudo apt-get install ros-kinetic-joy ros-kinetic-teleop-twist-joy ros-kinetic-teleop-twist-keyboard ros-kinetic-laser-proc ros-kinetic-rgbd-launch ros-kinetic-depthimage-to-laserscan ros-kinetic-rosserial-arduino ros-kinetic-rosserial-python ros-kinetic-rosserial-server ros-kinetic-rosserial-client ros-kinetic-rosserial-msgs ros-kinetic-amcl ros-kinetic-map-server ros-kinetic-move-base ros-kinetic-urdf ros-kinetic-xacro ros-kinetic-compressed-image-transport ros-kinetic-rqt-image-view ros-kinetic-gmapping ros-kinetic-navigation
+- - $ cd ~/catkin_ws/src
+- - $ git clone https://github.com/ROBOTIS-GIT/hls_lfcd_lds_driver.git
+- - $ git clone https://github.com/ROBOTIS-GIT/turtlebot3_msgs.git
+- - $ git clone https://github.com/ROBOTIS-GIT/turtlebot3.git
+- - $ cd ~/catkin_ws
+- - $ catkin_make
+
+- Allow access to the OpenCR USB port without acquiring root permission:
+- - rosrun turtlebot3_bringup create_udev_rules
+
 - Enable SSH:
 - - $ sudo apt-get install raspi-config rpi-update
 - - $ sudo raspi-config
