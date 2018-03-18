@@ -121,7 +121,12 @@ source ~/skalman/laptop/catkin_ws/devel/setup.bash
 
 ## Usage:
 
-- Power on the Raspbian RPI
+- Power on the Raspbian RPI and wait for a few seconds (for the wifi hotspot to start)
 - Connect the battery and power on the OpenCR (this will power on the Ubuntu RPI)
-- .
-- .
+- [laptop] $ roscore
+- - (ALT 1) Launch publishers for all sensors (INCLUDING THE LIDAR) and subscribers for steering commands:
+- - - [Ubuntu RPI] $ roslaunch turtlebot3_bringup turtlebot3_robot.launch
+- - (ALT 2) Launch publishers for all sensors except the LIDAR and subscribers for steering commands:
+- - - [Ubuntu RPI] $ roslaunch turtlebot3_bringup turtlebot3_core.launch
+- Launch keyboard teleoperation:
+- - [laptop] $ roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
