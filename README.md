@@ -146,5 +146,5 @@ source ~/skalman/laptop/catkin_ws/devel/setup.bash
 
 - Launch the webpage:
 - - (Make sure that the laptop is connected to the Raspian RPI wifi)
-- - (Make sure that)
+- - (Make sure that the Raspbian RPI is streaming video)
 - - [laptop] python ~/skalman/laptop/webpage/app.py
