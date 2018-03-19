@@ -171,3 +171,5 @@ source ~/skalman/laptop/catkin_ws/devel/setup.bash
 - (Make sure that the Raspbian RPI is streaming video)
 - [laptop] $ rosrun skalman webpage.py
 
+- Go to http://172.24.1.72:5000/ (manually steer using WASD on the laptop, or using the arrows on a smartphone)
+
