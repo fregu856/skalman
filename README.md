@@ -119,7 +119,7 @@ source ~/skalman/laptop/catkin_ws/devel/setup.bash
 - - $ source ~/.bashrc
 
 
-## Usage:
+## Usage (OLD):
 
 - Power on the Raspbian RPI and wait for a few seconds (for the wifi hotspot to start)
 - Connect the laptop to the Raspbian RPI wifi
@@ -148,3 +148,26 @@ source ~/skalman/laptop/catkin_ws/devel/setup.bash
 - - (Make sure that the laptop is connected to the Raspian RPI wifi)
 - - (Make sure that the Raspbian RPI is streaming video)
 - - [laptop] python ~/skalman/laptop/webpage/app.py
+
+## Usage:
+
+- Power on the Raspbian RPI and wait for a few seconds for the wifi hotspot to start
+- Connect the laptop to the Raspbian RPI wifi
+- Connect the battery and power on the OpenCR (this will power on the Ubuntu RPI)
+
+- SSH into the Ubuntu RPI:
+- - [laptop] $ ssh pi@172.24.1.57
+
+- SSH into the Raspbian RPI:
+- - [laptop] $ ssh pi@172.24.1.1
+
+- [laptop] $ roscore
+
+- [Ubuntu RPI] $ roslaunch skalman ubuntu_rpi.launch
+:
+- [Raspbian RPI] $ sh start_video_stream.sh
+
+- (Make sure that the laptop is connected to the Raspian RPI wifi)
+- (Make sure that the Raspbian RPI is streaming video)
+- [laptop] $ rosrun skalman webpage.py
+
