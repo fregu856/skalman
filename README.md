@@ -164,7 +164,7 @@ source ~/skalman/laptop/catkin_ws/devel/setup.bash
 - [laptop] $ roscore
 
 - [Ubuntu RPI] $ roslaunch skalman ubuntu_rpi.launch
-:
+
 - [Raspbian RPI] $ sh start_video_stream.sh
 
 - (Make sure that the laptop is connected to the Raspian RPI wifi)
