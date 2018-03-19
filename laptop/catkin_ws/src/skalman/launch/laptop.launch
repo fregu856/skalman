@@ -1,0 +1,10 @@
+<launch>
+    <!-- run turtlebot3_remote.launch: -->
+    <include file="$(find turtlebot3_bringup)/launch/turtlebot3_remote.launch"></include>
+
+    <!-- start rviz: -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find turtlebot3_description)/rviz/model.rviz"/>
+
+    <!-- run webpage.py in skalman/webpage: -->
+    <node pkg="skalman" type="webpage.py" name="webpage_node" output="screen"></node>
+</launch>

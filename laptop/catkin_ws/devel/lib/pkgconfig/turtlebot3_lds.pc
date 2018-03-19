@@ -1,0 +1,8 @@
+prefix=/home/fregu856/skalman/laptop/catkin_ws/devel
+
+Name: turtlebot3_lds
+Description: Description of turtlebot3_lds
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/fregu856/skalman/laptop/catkin_ws/devel/lib 
+Requires: rospy sensor_msgs geometry_msgs

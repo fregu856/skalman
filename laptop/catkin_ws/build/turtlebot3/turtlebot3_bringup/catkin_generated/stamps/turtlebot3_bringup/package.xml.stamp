@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package>
+  <name>turtlebot3_bringup</name>
+  <version>0.1.6</version>
+  <description>
+    roslaunch scripts for starting the TurtleBot3
+  </description>
+  <license>Apache License 2.0</license>
+  <author email="pyo@robotis.com">Pyo</author>
+  <maintainer email="pyo@robotis.com">Pyo</maintainer>
+  <url type="bugtracker">https://github.com/ROBOTIS-GIT/turtlebot3/issues</url>
+  <url type="repository">https://github.com/ROBOTIS-GIT/turtlebot3</url>
+  <url type="website">http://turtlebot3.robotis.com</url>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roscpp</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>diagnostic_msgs</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>turtlebot3_msgs</build_depend>
+  <run_depend>roscpp</run_depend>
+  <run_depend>std_msgs</run_depend>
+  <run_depend>diagnostic_msgs</run_depend>
+  <run_depend>sensor_msgs</run_depend>
+  <run_depend>turtlebot3_msgs</run_depend>
+  <run_depend>turtlebot3_description</run_depend>
+  <run_depend>turtlebot3_teleop</run_depend>
+  <run_depend>robot_state_publisher</run_depend>
+  <run_depend>rosserial_python</run_depend>
+  <run_depend>hls_lfcd_lds_driver</run_depend>
+  <export></export>
+</package>

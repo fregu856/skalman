@@ -1,0 +1,8 @@
+prefix=/home/fregu856/skalman/laptop/catkin_ws/devel
+
+Name: turtlebot3_bringup
+Description: Description of turtlebot3_bringup
+Version: 0.1.6
+Cflags: 
+Libs: -L/home/fregu856/skalman/laptop/catkin_ws/devel/lib -lturtlebot3_bringup
+Requires: roscpp std_msgs diagnostic_msgs sensor_msgs turtlebot3_msgs

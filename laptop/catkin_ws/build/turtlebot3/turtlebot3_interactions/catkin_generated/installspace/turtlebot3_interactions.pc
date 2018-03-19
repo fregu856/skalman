@@ -1,0 +1,8 @@
+prefix=/home/fregu856/skalman/laptop/catkin_ws/install
+
+Name: turtlebot3_interactions
+Description: Description of turtlebot3_interactions
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/fregu856/skalman/laptop/catkin_ws/install/lib 
+Requires: 

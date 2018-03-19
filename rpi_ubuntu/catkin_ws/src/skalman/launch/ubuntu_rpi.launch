@@ -1,0 +1,7 @@
+<launch>
+    <!-- run turtlebot3_robot.launch: -->
+    <include file="$(find turtlebot3_bringup)/launch/turtlebot3_robot.launch"></include>
+
+    <!-- run controller.py in skalman/python_scripts: -->
+    <node pkg="skalman" type="controller.py" name="controller_node" output="screen"></node>
+</launch>
