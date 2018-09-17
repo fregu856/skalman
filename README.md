@@ -103,6 +103,9 @@ source ~/skalman/laptop/catkin_ws/devel/setup.bash
 - - $ cd ~/skalman/laptop/catkin_ws
 - - $ catkin_make
 
+- Install the image_transport package:
+- - $ sudo apt-get install ros-kinetic-image-transport-plugins
+
 - Get its IP address:
 - - Make sure it is connected to the Raspbian RPI wifi
 - - $ ifconfig
