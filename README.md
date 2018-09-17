@@ -97,6 +97,9 @@ source ~/skalman/laptop/catkin_ws/devel/setup.bash
 - - $ cd ~/skalman/laptop/catkin_ws 
 - - $ catkin_make
 
+- Install the image_transport package:
+- - $ sudo apt-get install ros-kinetic-image-transport-plugins
+
 - Install the aprilTags package:
 - - $ cd ~/skalman/laptop/catkin_ws/src
 - - $ git clone https://github.com/RIVeR-Lab/apriltags_ros.git
