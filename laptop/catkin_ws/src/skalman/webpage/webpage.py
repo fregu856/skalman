@@ -4,6 +4,11 @@ import rospy
 from std_msgs.msg import String
 from geometry_msgs.msg import Twist
 
+from sensor_msgs.msg import Image
+from sensor_msgs.msg import CameraInfo
+from std_msgs.msg import Header
+from cv_bridge import CvBridge
+
 import numpy as np
 import cv2
 import requests
@@ -57,6 +62,25 @@ class Webpage:
         # create a publisher that publishes messages of type Twist on the topic \cmd_vel_check:
         self.pub = rospy.Publisher("/cmd_vel_check", Twist, queue_size=10)
 
+        # create publisher to publish frames from the video stream (needed for aprilTag detection):
+        self.image_pub = rospy.Publisher("/skalman_camera/image_raw", Image, queue_size = 1)
+
+        # create publisher to publish camera info (calibration params, needed for aprilTag detection):
+        self.camera_info_pub = rospy.Publisher("/skalman_camera/camera_info", CameraInfo, queue_size = 1)
+
+        # initialize cv_bridge for conversion between openCV and ROS images (needed for aprilTag detection):
+        self.cv_bridge = CvBridge()
+
+        # camera info and calibration parameters (needed for aprilTag detection):
+        camera_info_msg = CameraInfo()
+        camera_info_msg.height = 360
+        camera_info_msg.width = 640
+        camera_info_msg.distortion_model = "plumb_bob"
+        camera_info_msg.D = [1.6541397736403166e-01, -3.1762679367786140e-01, 0.0, 0.0, -1.4358526468495059e-01] # ([k1, k2, t1, t2, k3])
+        camera_info_msg.K = [4.8488441935486514e+02, 0, 320, 0, 4.8488441935486514e+02, 180, 0, 0, 1]  # ([fx, 0, cx, 0, fy, cy, 0, 0, 1])
+        camera_info_msg.R = [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0]
+        self.camera_info_msg = camera_info_msg
+
     def video_thread(self):
         # connect to the RPI video stream:
         cap = cv2.VideoCapture("tcp://172.24.1.1:8080")
@@ -73,8 +97,26 @@ class Webpage:
             # get a smaller version of the frame:
             self.latest_video_frame_small = cv2.resize(frame, (640, 360))
 
+            ####
+
+            header = Header()
+            header.stamp = rospy.Time.now()
+            header.frame_id = "skalman_camera"
+
+            # convert the latest frame from openCV format to ROS format:
+            img_ROS_msg = self.cv_bridge.cv2_to_imgmsg(self.latest_video_frame_small, "bgr8")
+
+            img_ROS_msg.header = header
+            self.camera_info_msg.header = header
+
+            # publish the frame in ROS format:
+            self.image_pub.publish(img_ROS_msg)
+
+            # publish the camera info:
+            self.camera_info_pub.publish(self.camera_info_msg)
+
             # display the resulting frame
-            # cv2.imshow("test", latest_video_frame_small_right)
+            # cv2.imshow("test", self.latest_video_frame)
             # if cv2.waitKey(1) & 0xFF == ord('q'):
             #     break
 

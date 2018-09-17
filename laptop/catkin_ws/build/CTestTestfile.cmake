@@ -5,10 +5,12 @@
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
 subdirs(gtest)
+subdirs(apriltags_ros/apriltags)
 subdirs(turtlebot3/turtlebot3)
 subdirs(turtlebot3_msgs)
 subdirs(turtlebot3/turtlebot3_slam)
 subdirs(skalman)
+subdirs(apriltags_ros/apriltags_ros)
 subdirs(turtlebot3/turtlebot3_bringup)
 subdirs(turtlebot3/turtlebot3_interactions)
 subdirs(turtlebot3/turtlebot3_lds)

@@ -234,6 +234,9 @@ DOXYGEN_EXECUTABLE:FILEPATH=/usr/bin/doxygen
 //Doxygen found
 DOXYGEN_FOUND:BOOL=TRUE
 
+//Path to a file.
+EIGEN_INCLUDE_DIR:PATH=/usr/include/eigen3
+
 //Path to a program.
 EMPY_EXECUTABLE:FILEPATH=/usr/bin/empy
 
@@ -263,6 +266,12 @@ LSB_RELEASE_EXECUTABLE:FILEPATH=/usr/bin/lsb_release
 
 //Path to a program.
 NOSETESTS:FILEPATH=/usr/bin/nosetests-2.7
+
+//The directory containing a CMake configuration file for OpenCV.
+OpenCV_DIR:PATH=/opt/ros/kinetic/share/OpenCV-3.2.0-dev
+
+//pkg-config executable
+PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
 //Path to a program.
 PYTHON_EXECUTABLE:FILEPATH=/usr/bin/python
@@ -303,11 +312,50 @@ actionlib_msgs_DIR:PATH=/opt/ros/kinetic/share/actionlib_msgs/cmake
 //The directory containing a CMake configuration file for amcl.
 amcl_DIR:PATH=/opt/ros/kinetic/share/amcl/cmake
 
+//Dependencies for the target
+apriltag_detector_LIB_DEPENDS:STATIC=general;apriltags;general;/opt/ros/kinetic/lib/libimage_transport.so;general;/opt/ros/kinetic/lib/libtf.so;general;/opt/ros/kinetic/lib/libtf2_ros.so;general;/opt/ros/kinetic/lib/libactionlib.so;general;/opt/ros/kinetic/lib/libmessage_filters.so;general;/opt/ros/kinetic/lib/libtf2.so;general;/home/fregu856/Summer17/Laptop/ROS_code/catkin_ws/devel/lib/libcv_bridge.so;general;/opt/ros/kinetic/lib/libopencv_calib3d3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_core3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_features2d3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_flann3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_highgui3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_imgcodecs3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_imgproc3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_ml3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_objdetect3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_photo3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_shape3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_stitching3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_superres3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_video3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_videoio3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_videostab3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_viz3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_aruco3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_bgsegm3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_bioinspired3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_ccalib3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_cvv3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_datasets3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_dpm3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_face3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_fuzzy3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_hdf3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_line_descriptor3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_optflow3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_phase_unwrapping3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_plot3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_reg3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_rgbd3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_saliency3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_stereo3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_structured_light3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_surface_matching3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_text3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_xfeatures2d3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_ximgproc3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_xobjdetect3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_xphoto3.so.3.2.0;general;/opt/ros/kinetic/lib/libnodeletlib.so;general;/opt/ros/kinetic/lib/libbondcpp.so;general;/usr/lib/x86_64-linux-gnu/libuuid.so;general;/opt/ros/kinetic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/kinetic/lib/libroslib.so;general;/opt/ros/kinetic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;
+
+//Dependencies for the target
+apriltag_detector_nodelet_LIB_DEPENDS:STATIC=general;apriltags;general;/opt/ros/kinetic/lib/libimage_transport.so;general;/opt/ros/kinetic/lib/libtf.so;general;/opt/ros/kinetic/lib/libtf2_ros.so;general;/opt/ros/kinetic/lib/libactionlib.so;general;/opt/ros/kinetic/lib/libmessage_filters.so;general;/opt/ros/kinetic/lib/libtf2.so;general;/home/fregu856/Summer17/Laptop/ROS_code/catkin_ws/devel/lib/libcv_bridge.so;general;/opt/ros/kinetic/lib/libopencv_calib3d3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_core3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_features2d3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_flann3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_highgui3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_imgcodecs3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_imgproc3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_ml3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_objdetect3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_photo3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_shape3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_stitching3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_superres3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_video3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_videoio3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_videostab3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_viz3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_aruco3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_bgsegm3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_bioinspired3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_ccalib3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_cvv3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_datasets3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_dpm3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_face3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_fuzzy3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_hdf3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_line_descriptor3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_optflow3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_phase_unwrapping3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_plot3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_reg3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_rgbd3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_saliency3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_stereo3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_structured_light3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_surface_matching3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_text3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_xfeatures2d3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_ximgproc3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_xobjdetect3.so.3.2.0;general;/opt/ros/kinetic/lib/libopencv_xphoto3.so.3.2.0;general;/opt/ros/kinetic/lib/libnodeletlib.so;general;/opt/ros/kinetic/lib/libbondcpp.so;general;/usr/lib/x86_64-linux-gnu/libuuid.so;general;/opt/ros/kinetic/lib/libclass_loader.so;general;/usr/lib/libPocoFoundation.so;general;/usr/lib/x86_64-linux-gnu/libdl.so;general;/opt/ros/kinetic/lib/libroslib.so;general;/opt/ros/kinetic/lib/librospack.so;general;/usr/lib/x86_64-linux-gnu/libpython2.7.so;general;/usr/lib/x86_64-linux-gnu/libboost_program_options.so;general;/usr/lib/x86_64-linux-gnu/libtinyxml.so;general;/opt/ros/kinetic/lib/libroscpp.so;general;/usr/lib/x86_64-linux-gnu/libboost_signals.so;general;/usr/lib/x86_64-linux-gnu/libboost_filesystem.so;general;/opt/ros/kinetic/lib/librosconsole.so;general;/opt/ros/kinetic/lib/librosconsole_log4cxx.so;general;/opt/ros/kinetic/lib/librosconsole_backend_interface.so;general;/usr/lib/x86_64-linux-gnu/liblog4cxx.so;general;/usr/lib/x86_64-linux-gnu/libboost_regex.so;general;/opt/ros/kinetic/lib/libxmlrpcpp.so;general;/opt/ros/kinetic/lib/libroscpp_serialization.so;general;/opt/ros/kinetic/lib/librostime.so;general;/opt/ros/kinetic/lib/libcpp_common.so;general;/usr/lib/x86_64-linux-gnu/libboost_system.so;general;/usr/lib/x86_64-linux-gnu/libboost_thread.so;general;/usr/lib/x86_64-linux-gnu/libboost_chrono.so;general;/usr/lib/x86_64-linux-gnu/libboost_date_time.so;general;/usr/lib/x86_64-linux-gnu/libboost_atomic.so;general;/usr/lib/x86_64-linux-gnu/libpthread.so;general;/usr/lib/x86_64-linux-gnu/libconsole_bridge.so;general;apriltag_detector;
+
+//Value Computed by CMake
+apriltags_BINARY_DIR:STATIC=/home/fregu856/skalman/laptop/catkin_ws/build/apriltags_ros/apriltags
+
+//The directory containing a CMake configuration file for apriltags.
+apriltags_DIR:PATH=/home/fregu856/skalman/laptop/catkin_ws/devel/share/apriltags/cmake
+
+//Dependencies for the target
+apriltags_LIB_DEPENDS:STATIC=general;opencv_calib3d;general;opencv_core;general;opencv_features2d;general;opencv_flann;general;opencv_highgui;general;opencv_imgcodecs;general;opencv_imgproc;general;opencv_ml;general;opencv_objdetect;general;opencv_photo;general;opencv_shape;general;opencv_stitching;general;opencv_superres;general;opencv_video;general;opencv_videoio;general;opencv_videostab;general;opencv_viz;general;opencv_aruco;general;opencv_bgsegm;general;opencv_bioinspired;general;opencv_ccalib;general;opencv_cvv;general;opencv_datasets;general;opencv_dpm;general;opencv_face;general;opencv_fuzzy;general;opencv_hdf;general;opencv_line_descriptor;general;opencv_optflow;general;opencv_phase_unwrapping;general;opencv_plot;general;opencv_reg;general;opencv_rgbd;general;opencv_saliency;general;opencv_stereo;general;opencv_structured_light;general;opencv_surface_matching;general;opencv_text;general;opencv_xfeatures2d;general;opencv_ximgproc;general;opencv_xobjdetect;general;opencv_xphoto;
+
+//Value Computed by CMake
+apriltags_SOURCE_DIR:STATIC=/home/fregu856/skalman/laptop/catkin_ws/src/apriltags_ros/apriltags
+
+//Value Computed by CMake
+apriltags_ros_BINARY_DIR:STATIC=/home/fregu856/skalman/laptop/catkin_ws/build/apriltags_ros/apriltags_ros
+
+//Value Computed by CMake
+apriltags_ros_SOURCE_DIR:STATIC=/home/fregu856/skalman/laptop/catkin_ws/src/apriltags_ros/apriltags_ros
+
+//The directory containing a CMake configuration file for bond.
+bond_DIR:PATH=/opt/ros/kinetic/share/bond/cmake
+
+//The directory containing a CMake configuration file for bondcpp.
+bondcpp_DIR:PATH=/opt/ros/kinetic/share/bondcpp/cmake
+
 //The directory containing a CMake configuration file for catkin.
 catkin_DIR:PATH=/opt/ros/kinetic/share/catkin/cmake
 
+//The directory containing a CMake configuration file for class_loader.
+class_loader_DIR:PATH=/opt/ros/kinetic/share/class_loader/cmake
+
+//The directory containing a CMake configuration file for cmake_modules.
+cmake_modules_DIR:PATH=/opt/ros/kinetic/share/cmake_modules/cmake
+
 //The directory containing a CMake configuration file for cpp_common.
 cpp_common_DIR:PATH=/opt/ros/kinetic/share/cpp_common/cmake
+
+//The directory containing a CMake configuration file for cv_bridge.
+cv_bridge_DIR:PATH=/home/fregu856/Summer17/Laptop/ROS_code/catkin_ws/devel/share/cv_bridge/cmake
 
 //The directory containing a CMake configuration file for diagnostic_msgs.
 diagnostic_msgs_DIR:PATH=/opt/ros/kinetic/share/diagnostic_msgs/cmake
@@ -361,6 +409,9 @@ gtest_force_shared_crt:BOOL=OFF
 //Dependencies for the target
 gtest_main_LIB_DEPENDS:STATIC=general;-lpthread;general;gtest;
 
+//The directory containing a CMake configuration file for image_transport.
+image_transport_DIR:PATH=/opt/ros/kinetic/share/image_transport/cmake
+
 //The directory containing a CMake configuration file for interactive_markers.
 interactive_markers_DIR:PATH=/opt/ros/kinetic/share/interactive_markers/cmake
 
@@ -387,6 +438,12 @@ move_base_msgs_DIR:PATH=/opt/ros/kinetic/share/move_base_msgs/cmake
 
 //The directory containing a CMake configuration file for nav_msgs.
 nav_msgs_DIR:PATH=/opt/ros/kinetic/share/nav_msgs/cmake
+
+//The directory containing a CMake configuration file for nodelet.
+nodelet_DIR:PATH=/opt/ros/kinetic/share/nodelet/cmake
+
+//The directory containing a CMake configuration file for pluginlib.
+pluginlib_DIR:PATH=/opt/ros/kinetic/share/pluginlib/cmake
 
 //The directory containing a CMake configuration file for rosbag.
 rosbag_DIR:PATH=/opt/ros/kinetic/share/rosbag/cmake
@@ -415,8 +472,14 @@ rosgraph_DIR:PATH=/opt/ros/kinetic/share/rosgraph/cmake
 //The directory containing a CMake configuration file for rosgraph_msgs.
 rosgraph_msgs_DIR:PATH=/opt/ros/kinetic/share/rosgraph_msgs/cmake
 
+//The directory containing a CMake configuration file for roslib.
+roslib_DIR:PATH=/opt/ros/kinetic/share/roslib/cmake
+
 //The directory containing a CMake configuration file for roslz4.
 roslz4_DIR:PATH=/opt/ros/kinetic/share/roslz4/cmake
+
+//The directory containing a CMake configuration file for rospack.
+rospack_DIR:PATH=/opt/ros/kinetic/share/rospack/cmake
 
 //The directory containing a CMake configuration file for rospy.
 rospy_DIR:PATH=/opt/ros/kinetic/share/rospy/cmake
@@ -432,6 +495,9 @@ skalman_BINARY_DIR:STATIC=/home/fregu856/skalman/laptop/catkin_ws/build/skalman
 
 //Value Computed by CMake
 skalman_SOURCE_DIR:STATIC=/home/fregu856/skalman/laptop/catkin_ws/src/skalman
+
+//The directory containing a CMake configuration file for smclib.
+smclib_DIR:PATH=/opt/ros/kinetic/share/smclib/cmake
 
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/kinetic/share/std_msgs/cmake
@@ -668,7 +734,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=14
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=16
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
@@ -707,6 +773,14 @@ CMAKE_STRIP-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: EIGEN_INCLUDE_DIR
+EIGEN_INCLUDE_DIR-ADVANCED:INTERNAL=1
+//Details about finding Eigen
+FIND_PACKAGE_MESSAGE_DETAILS_Eigen:INTERNAL=[/usr/include/eigen3][v()]
+//Details about finding OpenCV
+FIND_PACKAGE_MESSAGE_DETAILS_OpenCV:INTERNAL=[/opt/ros/kinetic][v3.2.0()]
+//Details about finding PkgConfig
+FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/bin/pkg-config][v0.29.1()]
 //Details about finding PythonInterp
 FIND_PACKAGE_MESSAGE_DETAILS_PythonInterp:INTERNAL=[/usr/bin/python][v2.7.12()]
 //Details about finding Threads
@@ -726,6 +800,42 @@ GTEST_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
 GTEST_MAIN_LIBRARY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: GTEST_MAIN_LIBRARY_DEBUG
 GTEST_MAIN_LIBRARY_DEBUG-ADVANCED:INTERNAL=1
+PC_EIGEN_CFLAGS:INTERNAL=-I/usr/include/eigen3
+PC_EIGEN_CFLAGS_I:INTERNAL=
+PC_EIGEN_CFLAGS_OTHER:INTERNAL=
+PC_EIGEN_FOUND:INTERNAL=1
+PC_EIGEN_INCLUDEDIR:INTERNAL=
+PC_EIGEN_INCLUDE_DIRS:INTERNAL=/usr/include/eigen3
+PC_EIGEN_LDFLAGS:INTERNAL=
+PC_EIGEN_LDFLAGS_OTHER:INTERNAL=
+PC_EIGEN_LIBDIR:INTERNAL=
+PC_EIGEN_LIBRARIES:INTERNAL=
+PC_EIGEN_LIBRARY_DIRS:INTERNAL=
+PC_EIGEN_LIBS:INTERNAL=
+PC_EIGEN_LIBS_L:INTERNAL=
+PC_EIGEN_LIBS_OTHER:INTERNAL=
+PC_EIGEN_LIBS_PATHS:INTERNAL=
+PC_EIGEN_PREFIX:INTERNAL=/usr
+PC_EIGEN_STATIC_CFLAGS:INTERNAL=-I/usr/include/eigen3
+PC_EIGEN_STATIC_CFLAGS_I:INTERNAL=
+PC_EIGEN_STATIC_CFLAGS_OTHER:INTERNAL=
+PC_EIGEN_STATIC_INCLUDE_DIRS:INTERNAL=/usr/include/eigen3
+PC_EIGEN_STATIC_LDFLAGS:INTERNAL=
+PC_EIGEN_STATIC_LDFLAGS_OTHER:INTERNAL=
+PC_EIGEN_STATIC_LIBDIR:INTERNAL=
+PC_EIGEN_STATIC_LIBRARIES:INTERNAL=
+PC_EIGEN_STATIC_LIBRARY_DIRS:INTERNAL=
+PC_EIGEN_STATIC_LIBS:INTERNAL=
+PC_EIGEN_STATIC_LIBS_L:INTERNAL=
+PC_EIGEN_STATIC_LIBS_OTHER:INTERNAL=
+PC_EIGEN_STATIC_LIBS_PATHS:INTERNAL=
+PC_EIGEN_VERSION:INTERNAL=3.2.92
+PC_EIGEN_eigen3_INCLUDEDIR:INTERNAL=
+PC_EIGEN_eigen3_LIBDIR:INTERNAL=
+PC_EIGEN_eigen3_PREFIX:INTERNAL=
+PC_EIGEN_eigen3_VERSION:INTERNAL=
+//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
+PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: PYTHON_EXECUTABLE
 PYTHON_EXECUTABLE-ADVANCED:INTERNAL=1
 //This needs to be in PYTHONPATH when 'setup.py install' is called.
@@ -744,4 +854,6 @@ _Boost_LIBRARY_DIR_RELEASE_LAST:INTERNAL=/usr/lib/x86_64-linux-gnu
 _Boost_NAMESPACE_LAST:INTERNAL=boost
 //Last used Boost_USE_MULTITHREADED value.
 _Boost_USE_MULTITHREADED_LAST:INTERNAL=TRUE
+__pkg_config_checked_PC_EIGEN:INTERNAL=1
+prefix_result:INTERNAL=
 
