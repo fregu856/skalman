@@ -97,6 +97,12 @@ source ~/skalman/laptop/catkin_ws/devel/setup.bash
 - - $ cd ~/skalman/laptop/catkin_ws 
 - - $ catkin_make
 
+- Install the aprilTags package:
+- - $ cd ~/skalman/laptop/catkin_ws/src
+- - $ git clone https://github.com/RIVeR-Lab/apriltags_ros.git
+- - $ cd ~/skalman/laptop/catkin_ws
+- - $ catkin_make
+
 - Get its IP address:
 - - Make sure it is connected to the Raspbian RPI wifi
 - - $ ifconfig
@@ -153,9 +159,9 @@ source ~/skalman/laptop/catkin_ws/devel/setup.bash
 
 - Power on the Raspbian RPI and wait for a few seconds for the wifi hotspot to start
 
-- Connect the laptop to the Raspbian RPI wifi
+- Connect the laptop to the Raspbian RPI wifi (RPI_Summer17)
 
-- Connect the battery and power on the OpenCR (this will power on the Ubuntu RPI
+- Connect the battery and power on the OpenCR (this will power on the Ubuntu RPI)
 
 - SSH into the Raspbian RPI:
 - - [laptop] $ ssh pi@172.24.1.1
