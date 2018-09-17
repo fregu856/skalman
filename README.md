@@ -155,7 +155,7 @@ source ~/skalman/laptop/catkin_ws/devel/setup.bash
 
 - Connect the laptop to the Raspbian RPI wifi (RPI_Summer17)
 
-- Connect the battery and power on the OpenCR (this will power on the Ubuntu RPI
+- Connect the battery and power on the OpenCR (this will power on the Ubuntu RPI)
 
 - SSH into the Raspbian RPI:
 - - [laptop] $ ssh pi@172.24.1.1
