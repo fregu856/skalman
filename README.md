@@ -97,6 +97,12 @@ source ~/skalman/laptop/catkin_ws/devel/setup.bash
 - - $ cd ~/skalman/laptop/catkin_ws 
 - - $ catkin_make
 
+- Install the aprilTags package:
+- - $ cd ~/skalman/laptop/catkin_ws/src
+- - $ git clone https://github.com/RIVeR-Lab/apriltags_ros.git
+- - $ cd ~/skalman/laptop/catkin_ws
+- - $ catkin_make
+
 - Get its IP address:
 - - Make sure it is connected to the Raspbian RPI wifi
 - - $ ifconfig
