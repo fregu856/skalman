@@ -7,4 +7,7 @@
 
     <!-- run webpage.py in skalman/webpage: -->
     <node pkg="skalman" type="webpage.py" name="webpage_node" output="screen"></node>
+
+    <!-- republish the ROS videostream as compressed images: -->
+    <node name="republish" type="republish" pkg="image_transport" output="screen" args="raw in:=/skalman_camera/image_raw compressed out:=/skalman_camera/image_raw" />
 </launch>

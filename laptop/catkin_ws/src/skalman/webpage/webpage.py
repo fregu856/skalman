@@ -25,6 +25,9 @@ socketio = SocketIO(app, async_mode = "threading")
 
 class Webpage:
     def __init__(self):
+        # initialize this code as a ROS node named webpage_node:
+        rospy.init_node("webpage_node", anonymous=True)
+
         self.mode = "Manual"
 
         # initialize the throttle direction ("Forward", "Backward", or
@@ -41,8 +44,8 @@ class Webpage:
         self.v_max = 0.125
         self.omega_max = 1
 
-        self.latest_video_frame = []
-        self.latest_video_frame_small = []
+        self.latest_video_frame = None
+        self.latest_video_frame_small = None
 
         # start a thread constantly reading frames from the RPI video stream:
         thread_video = Thread(target = self.video_thread)
@@ -55,9 +58,6 @@ class Webpage:
         # start a thread constantly sending sensor/status data to the web page:
         thread_web_comm = Thread(target = self.web_comm_thread)
         thread_web_comm.start()
-
-        # initialize this code as a ROS node named webpage_node:
-        rospy.init_node("webpage_node", anonymous=True)
 
         # create a publisher that publishes messages of type Twist on the topic \cmd_vel_check:
         self.pub = rospy.Publisher("/cmd_vel_check", Twist, queue_size=10)
@@ -96,24 +96,6 @@ class Webpage:
 
             # get a smaller version of the frame:
             self.latest_video_frame_small = cv2.resize(frame, (640, 360))
-
-            ####
-
-            header = Header()
-            header.stamp = rospy.Time.now()
-            header.frame_id = "skalman_camera"
-
-            # convert the latest frame from openCV format to ROS format:
-            img_ROS_msg = self.cv_bridge.cv2_to_imgmsg(self.latest_video_frame_small, "bgr8")
-
-            img_ROS_msg.header = header
-            self.camera_info_msg.header = header
-
-            # publish the frame in ROS format:
-            self.image_pub.publish(img_ROS_msg)
-
-            # publish the camera info:
-            self.camera_info_pub.publish(self.camera_info_msg)
 
             # display the resulting frame
             # cv2.imshow("test", self.latest_video_frame)
@@ -200,6 +182,32 @@ class Webpage:
 
             # publish the control signals (on the specified topic, i.e., on \cmd_vel_check):
             self.pub.publish(control_signals)
+
+
+
+
+
+            if self.latest_video_frame_small is not None:
+                header = Header()
+                header.stamp = rospy.Time.now()
+                header.frame_id = "skalman_camera"
+
+                # convert the latest frame from openCV format to ROS format:
+                img_ROS_msg = self.cv_bridge.cv2_to_imgmsg(self.latest_video_frame_small, "bgr8")
+
+                img_ROS_msg.header = header
+                self.camera_info_msg.header = header
+
+                # publish the frame in ROS format:
+                self.image_pub.publish(img_ROS_msg)
+
+                # publish the camera info:
+                self.camera_info_pub.publish(self.camera_info_msg)
+
+
+
+
+
 
             # sleep to get a loop frequency of 10 Hz:
             rate.sleep()
