@@ -153,7 +153,7 @@ source ~/skalman/laptop/catkin_ws/devel/setup.bash
 
 - Power on the Raspbian RPI and wait for a few seconds for the wifi hotspot to start
 
-- Connect the laptop to the Raspbian RPI wifi
+- Connect the laptop to the Raspbian RPI wifi (RPI_Summer17)
 
 - Connect the battery and power on the OpenCR (this will power on the Ubuntu RPI
 
